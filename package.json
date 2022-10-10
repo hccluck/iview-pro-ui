@@ -1,0 +1,38 @@
+{
+  "name": "iview-pro-ui",
+  "version": "1.0.0",
+  "description": "Extend iview to add some components and directives",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "iview",
+    "vue",
+    "viewui",
+    "vue.js",
+    "component",
+    "components",
+    "ui",
+    "framework"
+  ],
+  "author": "hccluck <hccluck@126.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hccluck/iview-pro-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hccluck/iview-pro-ui/issues"
+  },
+  "homepage": "https://github.com/hccluck/iview-pro-ui#readme",
+  "dependencies": {
+    "clipboard": "^2.0.11"
+  },
+  "peerDependencies": {
+    "vue": "^2.5.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}
