@@ -37,6 +37,8 @@ iview-pro-ui
 |   |
 |   ├── components
 |   |   |
+|   |   ├── SearchForm          // 可折叠搜索表单
+|   |   |
 |   |   └── TablePage           // 表格+分页组件
 |   |
 |   ├── directives
@@ -56,6 +58,29 @@ iview-pro-ui
 ```
 
 ### 使用说明
+
+`SearchForm` 组件用例
+
+```jsx
+<search-form :showFold="false">
+  <form-item label="字段1：">
+    <Input v-model="value1" placeholder="请输入" />
+  </form-item>
+  <form-item label="字段2：">
+    <Input v-model="value2" placeholder="请输入" />
+  </form-item>
+  <form-item label="字段3：">
+    <Input v-model="value3" placeholder="请输入" />
+  </form-item>
+  <form-item label="字段4：">
+    <Input v-model="value4" placeholder="请输入" />
+  </form-item>
+
+  <template #extra>
+    <Button @click="search" icon="ios-search" type="info">搜索</Button>
+  </template>
+</search-form>
+```
 
 `TablePage` 组件用例
 
