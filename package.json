@@ -2,7 +2,10 @@
   "name": "iview-pro-ui",
   "version": "1.0.0",
   "description": "Extend iview to add some components and directives",
+  "author": "hccluck <hccluck@126.com>",
+  "private": false,
   "main": "index.js",
+  "files": ["src"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +19,6 @@
     "ui",
     "framework"
   ],
-  "author": "hccluck <hccluck@126.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
