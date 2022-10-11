@@ -47,6 +47,8 @@ iview-pro-ui
 |   |   |
 |   |   └── loading.js          // v-loading 指令
 |   |
+|   ├── style                   // 定制主题
+|   |
 |   └── utils
 |
 |
@@ -62,7 +64,7 @@ iview-pro-ui
 `SearchForm` 组件用例
 
 ```jsx
-<search-form :showFold="false">
+<search-form showFold>
   <form-item label="字段1：">
     <Input v-model="value1" placeholder="请输入" />
   </form-item>

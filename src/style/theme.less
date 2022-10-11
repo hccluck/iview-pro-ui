@@ -1,0 +1,127 @@
+@import './reset.css';
+@import './custom.less';
+
+/* iview样式定制 */
+.ivu-btn {
+  height: @input-height-base;
+}
+.ivu-btn + .ivu-btn {
+  margin-left: 4px;
+}
+
+.ivu-modal-header,
+.ivu-card-head {
+  padding: 10px 12px;
+}
+
+.ivu-modal-body,
+.ivu-card-body {
+  padding: 12px;
+}
+
+.ivu-card-extra {
+  position: absolute;
+  top: 4px;
+}
+
+.ivu-input-wrapper .ivu-input {
+  font-size: 12px;
+}
+.ivu-table-cell-with-expand {
+  height: 20px;
+  padding: 5px 0;
+  line-height: 1;
+}
+.ivu-table-header th,
+.ivu-table-fixed-header th {
+  font-weight: 700;
+  height: 32px;
+}
+.ivu-table-row td {
+  height: 30px;
+  padding: 5px 0;
+}
+.ivu-table-cell {
+  padding-left: 8px;
+  padding-right: 8px;
+  line-height: 1.25;
+}
+
+.ivu-form-item {
+  margin-bottom: 20px;
+}
+.ivu-form-item .ivu-form-item-label {
+  padding: 7px 0;
+}
+.ivu-form-item .ivu-form-item-content {
+  line-height: @input-height-base;
+}
+.ivu-form-item-error-tip {
+  padding-top: 3px;
+}
+
+// 配置页表单样式 请使用 config-form 类名
+.config-form {
+  .ivu-form-item {
+    width: calc((100% - 30px) / 3);
+  }
+}
+.form-box,
+.config-form {
+  .ivu-form-item {
+    margin-bottom: 20px;
+  }
+  .ivu-form-item-label {
+    width: 120px;
+    padding: 7px 0;
+  }
+  .ivu-form-item-content {
+    margin-left: 120px;
+    line-height: @input-height-base;
+  }
+  .ivu-form-item-error-tip {
+    padding-top: 3px;
+  }
+}
+
+// 查询页条件表单样式 请使用 search-form 类名
+.c-query,
+.c-form,
+.c-form-menu,
+.f-double,
+.search-form {
+  padding: 6px 6px 0;
+  background: #f5f7f9;
+  border: 1px solid #d7d7d7;
+
+  .ivu-form-item {
+    margin-bottom: 8px;
+    width: calc((100% / 3) - 10px);
+  }
+  .ivu-form-item-label {
+    width: 120px;
+    padding: 7px 0;
+  }
+  .ivu-form-item-content {
+    margin-left: 120px;
+    line-height: 26px;
+  }
+  .ivu-date-picker {
+    width: 100%;
+  }
+}
+
+// 页底部操作框
+.footer-opts {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 56px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 20%);
+  padding: 16px;
+  background-color: #fff;
+  z-index: 999;
+  text-align: center;
+}
