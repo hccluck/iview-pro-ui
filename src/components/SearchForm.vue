@@ -23,7 +23,7 @@ export default {
     },
     showFold: {
       type: Boolean,
-      default: true,
+      default: false,
     },
   },
   data() {
