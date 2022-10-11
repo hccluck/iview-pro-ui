@@ -1,6 +1,6 @@
 <template>
   <div class="search-form">
-    <Form ref="form" inline :style="{ height: showFold && fold ? `${height}px` : 'auto' }">
+    <Form ref="form" inline :style="{ height: showFold && fold ? `${height}px` : 'auto', overflow: showFold && fold ? 'hidden' : 'inherit' }">
       <slot></slot>
     </Form>
     <div class="search-options" v-if="showFold">
@@ -39,7 +39,6 @@ export default {
   border: 1px solid #d7d7d7;
 
   ::v-deep .ivu-form {
-    overflow: hidden;
     transition: all 0.3s ease;
   }
   ::v-deep .ivu-form-item {
