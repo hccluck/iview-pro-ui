@@ -51,7 +51,6 @@ export default {
   }
   ::v-deep .ivu-form-item-content {
     margin-left: 120px;
-    line-height: 26px;
   }
   ::v-deep .ivu-date-picker {
     width: 100%;

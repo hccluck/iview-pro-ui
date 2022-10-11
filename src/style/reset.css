@@ -196,6 +196,7 @@ template {
 }
 
 /* 通用原子样式 */
+.fix:after,
 .clearfix:after {
   content: '';
   display: table;
