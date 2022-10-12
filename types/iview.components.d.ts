@@ -319,12 +319,12 @@ export declare class TablePage extends Vue {
 
 export declare class SearchForm extends Vue {
   /**
-   * 距离窗口顶部达到指定偏移量后触发
+   * 高度
    * @default 68
    */
   height?: number | string;
   /**
-   * 距离窗口底部达到指定偏移量后触发
+   * 是否需要折叠
    * @default false
    */
   showFold?: boolean;
