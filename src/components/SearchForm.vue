@@ -1,8 +1,12 @@
 <template>
   <div class="search-form">
-    <Form ref="form" inline :style="{ height: showFold && fold ? `${height}px` : 'auto', overflow: showFold && fold ? 'hidden' : 'inherit' }">
+    <Form ref="form" inline>
       <slot></slot>
+      <div v-if="showFold && fold">
+        <slot name="extra"></slot>
+      </div>
     </Form>
+
     <div class="search-options" v-if="showFold">
       <slot name="options"></slot>
       <Button @click="fold = !fold">
@@ -17,10 +21,6 @@
 export default {
   name: 'SearchForm',
   props: {
-    height: {
-      type: [Number, String],
-      default: 68,
-    },
     showFold: {
       type: Boolean,
       default: false,
