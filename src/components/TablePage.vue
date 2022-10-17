@@ -43,7 +43,7 @@
       </template>
     </Table>
 
-    <div class="page" v-if="page">
+    <div class="page-box" v-if="showpage">
       <Page
         :total="total"
         :current.sync="internalCurrent"
@@ -231,7 +231,7 @@ export default {
       default: false,
     },
     // 是否显示页码
-    page: {
+    showpage: {
       type: Boolean,
       default: true,
     },
@@ -340,19 +340,19 @@ export default {
 .table-page {
   position: relative;
 }
-.page {
+.page-box {
   padding: 12px 2px;
   background: #fff;
   text-align: right;
 }
-.page ::v-deep .ivu-select {
+.page-box ::v-deep .ivu-select {
   width: 100%;
 }
-.page ::v-deep .ivu-page-item-active {
+.page-box ::v-deep .ivu-page-item-active {
   background: #153a5c;
   color: #fff;
 }
-.page ::v-deep .ivu-page-item-active a {
+.page-box ::v-deep .ivu-page-item-active a {
   color: #fff;
 }
 </style>
