@@ -190,12 +190,11 @@ template {
   display: none;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(51, 51, 51, 0.3);
-  border-radius: 8px;
+  background: #cfd2d5;
 }
 ::-webkit-scrollbar-track {
   /* box-shadow : inset 0 0 5px rgba(0, 0, 0, 0.1); */
-  background-color: #ededed;
+  background-color: transparent;
 }
 ::-webkit-scrollbar-track-piece {
   background: 0 0;
