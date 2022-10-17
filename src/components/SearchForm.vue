@@ -2,9 +2,7 @@
   <div class="search-form">
     <Form ref="form" inline>
       <slot></slot>
-      <div v-if="showFold && fold">
-        <slot name="extra"></slot>
-      </div>
+      <slot name="extra" v-if="showFold && !fold"></slot>
     </Form>
 
     <div class="search-options" v-if="showFold">
