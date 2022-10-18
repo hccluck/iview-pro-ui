@@ -67,6 +67,7 @@
   }
 }
 .form-box,
+.rule-data,
 .config-form {
   .ivu-form-item {
     margin-bottom: 20px;
@@ -82,21 +83,42 @@
   .ivu-form-item-error-tip {
     padding-top: 3px;
   }
+  .ivu-radio-group-button .ivu-radio-wrapper {
+    height: @input-height-base;
+    line-height: @input-height-base;
+  }
+}
+
+// 详情表单样式
+.detail-form {
+  .ivu-form-item {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% / 3);
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .ivu-form-item-label {
+    width: 120px;
+  }
+
+  .ivu-row .ivu-col .ivu-form-item {
+    width: 100%;
+  }
 }
 
 // 查询页条件表单样式 请使用 search-form 类名
 .c-query,
-.c-form,
 .c-form-menu,
-.f-double,
 .search-form {
   padding: 6px 6px 0;
   background: #f5f7f9;
   border: 1px solid #d7d7d7;
 
   .ivu-form-item {
+    width: calc(100% / 3);
+    margin-right: 0;
     margin-bottom: 8px;
-    width: calc((100% / 3) - 10px);
   }
   .ivu-form-item-label {
     width: 120px;
@@ -107,6 +129,18 @@
     line-height: @input-height-base;
   }
   .ivu-date-picker {
+    width: 100%;
+  }
+  .ivu-input-number {
+    width: 100%;
+  }
+}
+
+.c-query,
+.c-form-menu {
+  margin-bottom: 10px;
+
+  .ivu-row .ivu-col .ivu-form-item {
     width: 100%;
   }
 }
