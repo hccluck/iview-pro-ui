@@ -235,6 +235,9 @@ template {
   color: #ccc;
   cursor: not-allowed;
 }
+.link {
+  color: #4a89dc;
+}
 .pointer {
   cursor: pointer;
 }
