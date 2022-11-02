@@ -15,9 +15,9 @@ export default {
 
 <style lang="less" scoped>
 .page-title {
-  padding: 20px 0;
+  padding: 16px 0;
   p {
-    padding-left: 16px;
+    padding-left: 10px;
     font-size: 16px;
     color: #153a5c;
     height: 16px;
