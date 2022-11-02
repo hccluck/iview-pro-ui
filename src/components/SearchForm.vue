@@ -1,5 +1,5 @@
 <template>
-  <div class="search-form">
+  <div class="search-form" :class="{ 'search-form-2': span == 2 }">
     <Form ref="form" inline>
       <slot></slot>
       <slot name="extra" v-if="showFold && !fold"></slot>
@@ -19,6 +19,10 @@
 export default {
   name: 'SearchForm',
   props: {
+    span: {
+      type: [Number, String],
+      default: 3,
+    },
     showFold: {
       type: Boolean,
       default: false,
