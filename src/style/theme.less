@@ -53,6 +53,9 @@
   padding-right: 8px;
   line-height: 1.25;
 }
+.ivu-select-dropdown {
+  max-height: 60vh;
+}
 
 .ivu-form-item {
   margin-bottom: 20px;
@@ -117,6 +120,7 @@
 // 查询页条件表单样式 请使用 search-form 类名
 .c-query,
 .c-form-menu,
+.search-form-2,
 .search-form {
   padding: 6px 6px 0;
   background: #f5f7f9;
@@ -140,6 +144,12 @@
   }
   .ivu-input-number {
     width: 100%;
+  }
+}
+
+.search-form-2 {
+  .ivu-form-item {
+    width: calc(50% - 10px);
   }
 }
 
