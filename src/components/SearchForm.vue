@@ -59,6 +59,12 @@ export default {
   }
 }
 
+.search-form-2 {
+  ::v-deep .ivu-form-item {
+    width: calc(50% - 10px);
+  }
+}
+
 .search-options {
   text-align: right;
   padding: 4px 12px 8px;
