@@ -1,6 +1,6 @@
 <template>
   <div class="search-form" :class="{ 'search-form-2': span == 2 }">
-    <Form ref="form" inline>
+    <Form ref="form" inline @submit.prevent="() => {}">
       <slot></slot>
       <slot name="extra" v-if="showFold && !fold"></slot>
     </Form>
