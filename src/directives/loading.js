@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import Loading from './loading.vue';
-import { addClass, removeClass, getStyle } from '../utils/dom';
+import { addClass, removeClass, getStyle } from '../utils/dom.js';
 const Mask = Vue.extend(Loading);
 
-const toggleLoading = (el, binding) => {
+const toggleLoading = function (el, binding) {
   if (binding.value) {
-    Vue.nextTick(() => {
+    Vue.nextTick(function () {
       if (binding.modifiers.fullscreen) {
         el.originalPosition = getStyle(document.body, 'position');
         el.originalOverflow = getStyle(document.body, 'overflow');
@@ -19,12 +19,12 @@ const toggleLoading = (el, binding) => {
         if (binding.modifiers.body) {
           el.originalPosition = getStyle(document.body, 'position');
 
-          ['top', 'left'].forEach(property => {
-            const scroll = property === 'top' ? 'scrollTop' : 'scrollLeft';
+          ['top', 'left'].forEach(function (property) {
+            var scroll = property === 'top' ? 'scrollTop' : 'scrollLeft';
             el.maskStyle[property] =
               el.getBoundingClientRect()[property] + document.body[scroll] + document.documentElement[scroll] - parseInt(getStyle(document.body, `margin-${property}`), 10) + 'px';
           });
-          ['height', 'width'].forEach(property => {
+          ['height', 'width'].forEach(function (property) {
             el.maskStyle[property] = el.getBoundingClientRect()[property] + 'px';
           });
 
@@ -40,9 +40,9 @@ const toggleLoading = (el, binding) => {
     el.instance.hiding = true;
   }
 };
-const insertDom = (parent, el, binding) => {
+const insertDom = function (parent, el, binding) {
   if (!el.domVisible && getStyle(el, 'display') !== 'none' && getStyle(el, 'visibility') !== 'hidden') {
-    Object.keys(el.maskStyle).forEach(property => {
+    Object.keys(el.maskStyle).forEach(function (property) {
       el.mask.style[property] = el.maskStyle[property];
     });
 
@@ -55,7 +55,7 @@ const insertDom = (parent, el, binding) => {
     el.domVisible = true;
 
     parent.appendChild(el.mask);
-    Vue.nextTick(() => {
+    Vue.nextTick(function () {
       if (el.instance.hiding) {
         el.instance.$emit('after-leave');
       } else {

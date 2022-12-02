@@ -2,8 +2,8 @@ import TablePage from './src/components/TablePage.vue';
 import SearchForm from './src/components/SearchForm.vue';
 import PageTitle from './src/components/PageTitle.vue';
 
-// import copy from './src/directives/copy';
-import loading from './src/directives/loading';
+// import copy from './src/directives/copy.js';
+import loading from './src/directives/loading.js';
 
 const iViewProUi = {
   install(Vue) {
