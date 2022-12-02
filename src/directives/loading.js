@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import Loading from './loading.vue';
 import { addClass, removeClass, getStyle } from '../utils/dom.js';
-const Mask = Vue.extend(Loading);
+var Mask = Vue.extend(Loading);
 
-const toggleLoading = function (el, binding) {
+var toggleLoading = function (el, binding) {
   if (binding.value) {
     Vue.nextTick(function () {
       if (binding.modifiers.fullscreen) {
@@ -40,7 +40,7 @@ const toggleLoading = function (el, binding) {
     el.instance.hiding = true;
   }
 };
-const insertDom = function (parent, el, binding) {
+var insertDom = function (parent, el, binding) {
   if (!el.domVisible && getStyle(el, 'display') !== 'none' && getStyle(el, 'visibility') !== 'hidden') {
     Object.keys(el.maskStyle).forEach(function (property) {
       el.mask.style[property] = el.maskStyle[property];
@@ -69,14 +69,14 @@ const insertDom = function (parent, el, binding) {
   }
 };
 
-const loading = {
+var loading = {
   bind: function (el, binding, vnode) {
-    const textExr = el.getAttribute('element-loading-text');
-    const spinnerExr = el.getAttribute('element-loading-spinner');
-    const backgroundExr = el.getAttribute('element-loading-background');
-    const customClassExr = el.getAttribute('element-loading-custom-class');
-    const vm = vnode.context;
-    const mask = new Mask({
+    var textExr = el.getAttribute('element-loading-text');
+    var spinnerExr = el.getAttribute('element-loading-spinner');
+    var backgroundExr = el.getAttribute('element-loading-background');
+    var customClassExr = el.getAttribute('element-loading-custom-class');
+    var vm = vnode.context;
+    var mask = new Mask({
       el: document.createElement('div'),
       data: {
         text: (vm && vm[textExr]) || textExr,
