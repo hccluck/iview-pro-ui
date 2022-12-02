@@ -6,7 +6,7 @@ import PageTitle from './src/components/PageTitle.vue';
 import loading from './src/directives/loading.js';
 
 const iViewProUi = {
-  install(Vue) {
+  install: function(Vue) {
     // Vue.directive('copy', copy);
     Vue.directive('loading', loading);
 
