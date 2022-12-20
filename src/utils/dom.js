@@ -1,10 +1,10 @@
-var SPECIAL_CHARS_REGEXP = /([:\-_]+(.))/g;
-var MOZ_HACK_REGEXP = /^moz([A-Z])/;
+const SPECIAL_CHARS_REGEXP = /([:\-_]+(.))/g;
+const MOZ_HACK_REGEXP = /^moz([A-Z])/;
 
-var trim = function (string) {
+const trim = function (string) {
   return (string || '').replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, '');
 };
-var camelCase = function (name) {
+const camelCase = function (name) {
   return name
     .replace(SPECIAL_CHARS_REGEXP, function (_, separator, letter, offset) {
       return offset ? letter.toUpperCase() : letter;
@@ -58,7 +58,7 @@ export function removeClass(el, cls) {
     el.className = trim(curClass);
   }
 }
-export var getStyle = function (element, styleName) {
+export const getStyle = function (element, styleName) {
   if (!element || !styleName) return null;
   styleName = camelCase(styleName);
   if (styleName === 'float') {

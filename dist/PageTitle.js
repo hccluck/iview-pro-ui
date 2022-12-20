@@ -1,0 +1,1 @@
+"use strict";var PageTitle={name:"PageTitle",props:{title:{type:String,default:"title"}},render:function(e){return e("div",{class:"page-title"},[e("p",this.title)])},install:function(e){e.component(PageTitle.name,PageTitle)}};module.exports=PageTitle;
