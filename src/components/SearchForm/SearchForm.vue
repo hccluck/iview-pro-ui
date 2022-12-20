@@ -40,27 +40,27 @@ export default {
   background: #f5f7f9;
   border: 1px solid #d7d7d7;
 
-  ::v-deep .ivu-form {
+  :deep .ivu-form {
     transition: all 0.3s ease;
   }
-  ::v-deep .ivu-form-item {
+  :deep .ivu-form-item {
     margin-bottom: 8px;
     width: calc((100% / 3) - 10px);
   }
-  ::v-deep .ivu-form-item-label {
+  :deep .ivu-form-item-label {
     width: 120px;
     padding: 7px 0;
   }
-  ::v-deep .ivu-form-item-content {
+  :deep .ivu-form-item-content {
     margin-left: 120px;
   }
-  ::v-deep .ivu-date-picker {
+  :deep .ivu-date-picker {
     width: 100%;
   }
 }
 
 .search-form-2 {
-  ::v-deep .ivu-form-item {
+  :deep .ivu-form-item {
     width: calc(50% - 10px);
   }
 }

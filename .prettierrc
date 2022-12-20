@@ -9,6 +9,5 @@
   "useTabs": false,
   "proseWrap": "preserve",
   "arrowParens": "avoid",
-  "endOfLine": "auto",
-  "ignorePath": ".prettierignore"
+  "endOfLine": "auto"
 }

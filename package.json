@@ -1,22 +1,36 @@
 {
   "name": "iview-pro-ui",
-  "version": "1.2.12",
+  "version": "1.3.0",
   "description": "Extend iview to add some components and directives",
   "author": "hccluck <hccluck@126.com>",
   "private": false,
-  "main": "index.js",
+  "main": "dist/iViewProUi.min.js",
+  "css": "dist/index.css",
+  "style": "dist/index.css",
   "typings": "types/index.d.ts",
   "files": [
+    "dist",
     "src",
     "types"
   ],
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf dist",
+    "dev": "npm run dev:umd",
+    "dev:umd": "rollup -c -w --format umd",
+    "build": "npm run build:umd & npm run build:coms",
+    "build:umd": "rollup -c --format umd",
+    "build:cjs": "rollup -c --format cjs",
+    "build:coms": "rollup -c rollup.components.js --format cjs",
+    "dist": "npm run clean & npm run build",
+    "format": "prettier --write ./** --loglevel warn"
   },
   "keywords": [
     "iview",
-    "vue",
+    "view-design",
     "viewui",
+    "iViewProUi",
+    "vue",
     "vue.js",
     "component",
     "components",
@@ -33,12 +47,29 @@
   },
   "homepage": "https://github.com/hccluck/iview-pro-ui#readme",
   "dependencies": {
-    "clipboard": "^2.0.11"
+    "@rollup/plugin-json": "^5.0.2",
+    "clipboard": "^2.0.11",
+    "core-js": "^3.20.3",
+    "rollup-plugin-uglify": "^6.0.4"
   },
   "peerDependencies": {
+    "view-design": "4.5.0",
     "vue": "^2.5.2"
   },
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "@babel/core": "^7.20.5",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^23.0.3",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@vue/babel-preset-jsx": "^1.4.0",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.6.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-less": "^1.1.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-vue2": "^0.8.1"
   }
 }

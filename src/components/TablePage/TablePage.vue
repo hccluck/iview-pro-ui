@@ -72,8 +72,11 @@
 </template>
 
 <script>
+// import loading from '../../directives/loading.js';
+
 export default {
   name: 'TablePage',
+  // directives: { loading },
   props: {
     // 表格数据
     data: {
@@ -345,14 +348,14 @@ export default {
   background: #fff;
   text-align: right;
 }
-.page-box ::v-deep .ivu-select {
+.page-box :deep .ivu-select {
   width: 100%;
 }
-.page-box ::v-deep .ivu-page-item-active {
+.page-box :deep .ivu-page-item-active {
   background: #153a5c;
   color: #fff;
 }
-.page-box ::v-deep .ivu-page-item-active a {
+.page-box :deep .ivu-page-item-active a {
   color: #fff;
 }
 </style>
