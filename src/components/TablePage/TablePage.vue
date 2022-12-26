@@ -339,7 +339,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .table-page {
   position: relative;
 }
@@ -348,14 +348,14 @@ export default {
   background: #fff;
   text-align: right;
 }
-.page-box :deep .ivu-select {
+.page-box .ivu-select {
   width: 100%;
 }
-.page-box :deep .ivu-page-item-active {
+.page-box .ivu-page-item-active {
   background: #153a5c;
   color: #fff;
 }
-.page-box :deep .ivu-page-item-active a {
+.page-box .ivu-page-item-active a {
   color: #fff;
 }
 </style>
