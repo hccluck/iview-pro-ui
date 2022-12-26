@@ -19,6 +19,7 @@ export default {
     nodeResolve(),
     json(),
     vue({
+      target: 'browser',
       compileTemplate: true,
     }),
     commonjs(),

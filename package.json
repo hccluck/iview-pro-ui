@@ -1,6 +1,6 @@
 {
   "name": "iview-pro-ui",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "Extend iview to add some components and directives",
   "author": "hccluck <hccluck@126.com>",
   "private": false,
@@ -47,10 +47,7 @@
   },
   "homepage": "https://github.com/hccluck/iview-pro-ui#readme",
   "dependencies": {
-    "@rollup/plugin-json": "^5.0.2",
-    "clipboard": "^2.0.11",
-    "core-js": "^3.20.3",
-    "rollup-plugin-uglify": "^6.0.4"
+    "clipboard": "^2.0.11"
   },
   "peerDependencies": {
     "view-design": "4.5.0",
@@ -62,14 +59,19 @@
     "@babel/preset-env": "^7.20.2",
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^23.0.3",
+    "@rollup/plugin-json": "^5.0.2",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@vue/babel-preset-jsx": "^1.4.0",
+    "@vue/compiler-sfc": "^2.7.14",
+    "core-js": "^3.20.3",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "rollup": "^3.6.0",
     "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-less": "^1.1.3",
     "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-uglify": "^6.0.4",
+    "rollup-plugin-vue": "^6.0.0",
     "rollup-plugin-vue2": "^0.8.1"
   }
 }

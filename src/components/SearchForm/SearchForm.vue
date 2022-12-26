@@ -34,33 +34,33 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 .search-form {
   padding: 6px 6px 0;
   background: #f5f7f9;
   border: 1px solid #d7d7d7;
 
-  :deep .ivu-form {
+  .ivu-form {
     transition: all 0.3s ease;
   }
-  :deep .ivu-form-item {
+  .ivu-form-item {
     margin-bottom: 8px;
     width: calc((100% / 3) - 10px);
   }
-  :deep .ivu-form-item-label {
+  .ivu-form-item-label {
     width: 120px;
     padding: 7px 0;
   }
-  :deep .ivu-form-item-content {
+  .ivu-form-item-content {
     margin-left: 120px;
   }
-  :deep .ivu-date-picker {
+  .ivu-date-picker {
     width: 100%;
   }
 }
 
 .search-form-2 {
-  :deep .ivu-form-item {
+  .ivu-form-item {
     width: calc(50% - 10px);
   }
 }
