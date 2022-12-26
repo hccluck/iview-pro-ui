@@ -76,17 +76,6 @@
     stroke-dashoffset: -120px;
   }
 }
-.page-title {
-  padding: 16px 0;
-}
-.page-title p {
-  padding-left: 10px;
-  font-size: 16px;
-  color: #153a5c;
-  height: 16px;
-  line-height: 1;
-  border-left: 2px solid #153a5c;
-}
 .table-page {
   position: relative;
 }
@@ -143,4 +132,15 @@
 }
 .search-options i.active {
   transform: rotate(180deg);
+}
+.page-title {
+  padding: 16px 0;
+}
+.page-title p {
+  padding-left: 10px;
+  font-size: 16px;
+  color: #153a5c;
+  height: 16px;
+  line-height: 1;
+  border-left: 2px solid #153a5c;
 }

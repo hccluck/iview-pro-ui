@@ -332,7 +332,8 @@ export default {
     refresh(current, pageSize) {
       this.$emit('refresh', current, pageSize);
     },
-    query() {
+    query(reset = true) {
+      if (reset) this.internalCurrent = 1;
       this.refresh(this.internalCurrent, this.internalPageSize);
     },
   },
