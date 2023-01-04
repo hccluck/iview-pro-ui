@@ -356,7 +356,8 @@ export default {
   background: #153a5c;
   color: #fff;
 }
-.page-box .ivu-page-item-active a {
+.page-box .ivu-page-item-active a,
+.page-box .ivu-page-item-active a:hover {
   color: #fff;
 }
 </style>
