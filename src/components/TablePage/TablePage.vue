@@ -18,6 +18,7 @@
       :tooltip-theme="tooltipTheme"
       :row-key="rowKey"
       :highlight-row="highlightRow"
+      :span-method="spanMethod"
       @on-current-change="onCurrentChange"
       @on-select="onSelect"
       @on-select-cancel="onSelectCancel"
@@ -123,6 +124,9 @@ export default {
     highlightRow: {
       type: Boolean,
       default: false,
+    },
+    spanMethod: {
+      type: Function,
     },
     // 行的 className 的回调方法
     rowClassName: {
