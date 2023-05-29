@@ -1,6 +1,6 @@
 <template>
   <div class="search-form" :class="{ 'search-form-2': span == 2 }">
-    <Form ref="form" inline>
+    <Form ref="form" inline :label-width="labelWidth" :model="model" :rules="rules">
       <slot></slot>
       <slot name="extra" v-if="showFold && !fold"></slot>
     </Form>
@@ -22,6 +22,18 @@ export default {
     span: {
       type: [Number, String],
       default: 3,
+    },
+    labelWidth: {
+      type: Number,
+      default: 120,
+    },
+    model: {
+      type: Object,
+      default: () => ({}),
+    },
+    rules: {
+      type: Object,
+      default: () => ({}),
     },
     showFold: {
       type: Boolean,
@@ -48,11 +60,7 @@ export default {
     width: calc((100% / 3) - 10px);
   }
   .ivu-form-item-label {
-    width: 120px;
     padding: 7px 0;
-  }
-  .ivu-form-item-content {
-    margin-left: 120px;
   }
   .ivu-date-picker {
     width: 100%;
