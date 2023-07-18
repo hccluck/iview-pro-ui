@@ -1,3 +1,14 @@
+.page-title {
+  padding: 16px 0;
+}
+.page-title p {
+  padding-left: 10px;
+  font-size: 16px;
+  color: #153a5c;
+  height: 16px;
+  line-height: 1;
+  border-left: 2px solid #153a5c;
+}
 .search-form {
   padding: 6px 6px 0;
   background: #f5f7f9;
@@ -21,7 +32,7 @@
 }
 .search-options {
   text-align: right;
-  padding: 4px 12px 8px;
+  padding: 4px 11px 8px;
 }
 .search-options button,
 .search-options span {
@@ -51,15 +62,4 @@
 .page-box .ivu-page-item-active a,
 .page-box .ivu-page-item-active a:hover {
   color: #fff;
-}
-.page-title {
-  padding: 16px 0;
-}
-.page-title p {
-  padding-left: 10px;
-  font-size: 16px;
-  color: #153a5c;
-  height: 16px;
-  line-height: 1;
-  border-left: 2px solid #153a5c;
 }

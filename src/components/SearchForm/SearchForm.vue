@@ -75,7 +75,7 @@ export default {
 
 .search-options {
   text-align: right;
-  padding: 4px 12px 8px;
+  padding: 4px 11px 8px;
 
   button,
   span {
