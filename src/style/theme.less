@@ -1,5 +1,4 @@
 @import './reset.css';
-@import './custom.less';
 
 /* iview样式定制 */
 .ivu-btn {
@@ -70,15 +69,70 @@
   padding-top: 3px;
 }
 
-// 配置页表单样式 请使用 config-form 类名
-.config-form {
+.card-title {
+  font-size: 14px;
+  vertical-align: middle;
+}
+.action-btn {
+  color: #4a89dc;
+  cursor: pointer;
+}
+.link {
+  color: @link-color;
+}
+.error {
+  color: @error-color;
+}
+.pointer {
+  cursor: pointer;
+}
+.not-allowed {
+  color: #ccc;
+  cursor: not-allowed;
+}
+.mr4 {
+  margin-right: 4px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.mr20 {
+  margin-right: 20px;
+}
+
+.search-form-2,
+.search-form {
+  padding: 6px 5px 0 5px;
+  background: @background-color-base;
+  border: 1px solid @border-color-base;
+
   .ivu-form-item {
-    width: calc((100% - 30px) / 3);
+    margin-bottom: 8px;
+  }
+
+  .ivu-form-item-label {
+    padding: 7px 0;
+    width: 120px;
+  }
+
+  .ivu-form-item-content {
+    margin-left: 120px;
+    line-height: @input-height-base;
+  }
+
+  .ivu-row .ivu-col .ivu-form-item {
+    width: 100%;
+  }
+  .ivu-date-picker {
+    width: 100%;
   }
 }
-.form-box,
-.rule-data,
+
+.config-form-2,
 .config-form {
+  .ivu-date-picker {
+    width: 100%;
+  }
   .ivu-form-item {
     margin-bottom: 20px;
   }
@@ -99,17 +153,28 @@
   }
 }
 
-// 详情表单样式
+.detail-form-2,
 .detail-form {
   .ivu-form-item {
     display: inline-block;
     vertical-align: top;
-    width: calc(100% / 3);
     margin-right: 0;
-    margin-bottom: 0;
+    margin-bottom: 4px;
   }
+
   .ivu-form-item-label {
+    padding: 7px 0;
     width: 120px;
+    color: #888;
+  }
+
+  .ivu-form-item-content {
+    margin-left: 120px;
+    padding: 5px 0;
+    line-height: 1.35;
+    color: #333;
+    white-space: break-spaces;
+    word-wrap: break-word;
   }
 
   .ivu-row .ivu-col .ivu-form-item {
@@ -117,52 +182,44 @@
   }
 }
 
-// 查询页条件表单样式 请使用 search-form 类名
-.c-query,
-.c-form-menu,
+.detail-form-2,
+.detail-form,
 .search-form-2,
-.search-form {
-  padding: 6px 6px 0;
-  background: #f5f7f9;
-  border: 1px solid #d7d7d7;
-
+.search-form,
+.config-form-2,
+.config-form {
   .ivu-form-item {
-    width: calc(100% / 3);
-    margin-right: 0;
-    margin-bottom: 8px;
-  }
-  .ivu-form-item-label {
-    width: 120px;
-    padding: 7px 0;
-  }
-  .ivu-form-item-content {
-    margin-left: 120px;
-    line-height: @input-height-base;
-  }
-  .ivu-date-picker {
-    width: 100%;
-  }
-  .ivu-input-number {
-    width: 100%;
+    width: calc((100% / 3) - 10px);
+
+    &.col-8 {
+      width: calc((100% / 3) - 10px);
+    }
+    &.col-12 {
+      width: calc(50% - 10px);
+    }
+    &.col-16 {
+      width: calc((200% / 3) - 10px);
+    }
+    &.col-24 {
+      width: calc(100% - 10px);
+    }
   }
 }
 
+@media only screen and (max-width: 960px) {
+  .search-form .ivu-form-item {
+    width: calc(50% - 10px);
+  }
+}
+
+.config-form-2,
+.detail-form-2,
 .search-form-2 {
   .ivu-form-item {
     width: calc(50% - 10px);
   }
 }
 
-.c-query,
-.c-form-menu {
-  margin-bottom: 10px;
-
-  .ivu-row .ivu-col .ivu-form-item {
-    width: 100%;
-  }
-}
-
-// 页底部操作框
 .footer-opts {
   position: fixed;
   bottom: 0;
@@ -170,9 +227,82 @@
   right: 0;
   width: 100%;
   height: 56px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 20%);
+  box-shadow: 2px -2px 20px 0px #ddd;
   padding: 16px;
   background-color: #fff;
   z-index: 999;
   text-align: center;
+}
+.opts-height {
+  padding-bottom: 60px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-button:end:increment,
+::-webkit-scrollbar-button:start:decrement {
+  display: block;
+}
+
+::-webkit-scrollbar-button:vertical:end:decrement,
+::-webkit-scrollbar-button:vertical:start:increment {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb:horizontal,
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-track:horizontal,
+::-webkit-scrollbar-track:vertical {
+  border-color: transparent;
+  border-style: solid;
+}
+
+::-webkit-scrollbar-track:vertical::-webkit-scrollbar-track:horizontal {
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb {
+  min-height: 28px;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  // border-radius: 2px;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+::-webkit-scrollbar-thumb:horizontal,
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-track:horizontal,
+::-webkit-scrollbar-track:vertical {
+  border-width: 0;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-track:active {
+  background-color: rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.14), inset -1px -1px 0 rgba(0, 0, 0, 0.07);
 }

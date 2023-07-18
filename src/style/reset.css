@@ -179,26 +179,6 @@ template {
 [hidden] {
   display: none;
 }
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-::-webkit-scrollbar-button {
-  display: none;
-}
-::-webkit-scrollbar-corner {
-  display: none;
-}
-::-webkit-scrollbar-thumb {
-  background: #cfd2d5;
-}
-::-webkit-scrollbar-track {
-  /* box-shadow : inset 0 0 5px rgba(0, 0, 0, 0.1); */
-  background-color: transparent;
-}
-::-webkit-scrollbar-track-piece {
-  background: 0 0;
-}
 ::selection {
   background: rgba(1, 136, 251, 0.5);
 }
@@ -234,12 +214,6 @@ template {
 .disabled {
   color: #ccc;
   cursor: not-allowed;
-}
-.link {
-  color: #4a89dc;
-}
-.pointer {
-  cursor: pointer;
 }
 .ml4 {
   margin-left: 4px;
