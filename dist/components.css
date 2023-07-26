@@ -9,6 +9,25 @@
   line-height: 1;
   border-left: 2px solid #153a5c;
 }
+.table-page {
+  position: relative;
+}
+.page-box {
+  padding: 12px 2px;
+  background: #fff;
+  text-align: right;
+}
+.page-box .ivu-select {
+  width: 100%;
+}
+.page-box .ivu-page-item-active {
+  background: #153a5c;
+  color: #fff;
+}
+.page-box .ivu-page-item-active a,
+.page-box .ivu-page-item-active a:hover {
+  color: #fff;
+}
 .search-form {
   padding: 6px 6px 0;
   background: #f5f7f9;
@@ -43,23 +62,4 @@
 }
 .search-options i.active {
   transform: rotate(180deg);
-}
-.table-page {
-  position: relative;
-}
-.page-box {
-  padding: 12px 2px;
-  background: #fff;
-  text-align: right;
-}
-.page-box .ivu-select {
-  width: 100%;
-}
-.page-box .ivu-page-item-active {
-  background: #153a5c;
-  color: #fff;
-}
-.page-box .ivu-page-item-active a,
-.page-box .ivu-page-item-active a:hover {
-  color: #fff;
 }

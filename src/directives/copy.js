@@ -1,50 +1,49 @@
-import Clipboardjs from 'clipboard';
+import Clipboard from 'clipboard';
 
-const copy = {
-  bind: function (el, { value }) {
-    if (!Clipboardjs.isSupported()) {
-      return;
-    }
-
-    el.style.cursor = 'pointer';
-
-    let text = typeof value === 'string' ? value : typeof value === 'object' && value !== null && value.data ? value.data : el.getAttribute('copy-data');
-    let target = typeof value === 'object' && value !== null && value.target ? value.target : null;
-
-    let container = typeof value === 'object' && value !== null && value.container ? value.container : null;
-
-    let options = {};
-
-    if (target) {
-      let element = document.querySelector(target);
-      element && (options.target = () => element);
+export default {
+  bind(el, { value, arg }) {
+    if (arg === 'success') {
+      el._v_copy_success = value;
+    } else if (arg === 'error') {
+      el._v_copy_error = value;
     } else {
-      options.text = () => text;
+      const clipboard = new Clipboard(el, {
+        text() {
+          return value;
+        },
+        action() {
+          return arg === 'cut' ? 'cut' : 'copy';
+        },
+      });
+
+      clipboard.on('success', e => el._v_copy_success?.(e));
+      clipboard.on('error', e => el._v_copy_error?.(e));
+
+      el._v_context = clipboard;
     }
-
-    if (container) {
-      let element = document.querySelector(container);
-      element && (options.container = element);
-    }
-
-    const clipboard = new Clipboardjs(el, options);
-
-    clipboard.on('success', function (e) {
-      value && value.success && value.success(e);
-    });
-    clipboard.on('error', function (e) {
-      value && value.error && value.error(e);
-    });
-
-    el.$clipboard = clipboard;
   },
-  unbind: function (el) {
-    if (!Clipboardjs.isSupported()) {
-      return;
+  update(el, { value, arg }) {
+    if (arg === 'success') {
+      el._v_copy_success = value;
+    } else if (arg === 'error') {
+      el._v_copy_error = value;
+    } else {
+      el._v_context.text = function () {
+        return value;
+      };
+      el._v_context.action = function () {
+        return arg === 'cut' ? 'cut' : 'copy';
+      };
     }
-    el.$clipboard.destroy();
-    delete el.$clipboard;
+  },
+  unbind(el, { arg }) {
+    if (arg === 'success') {
+      delete el._v_copy_success;
+    } else if (arg === 'error') {
+      delete el._v_copy_error;
+    } else {
+      el._v_context?.destroy();
+      delete el._v_context;
+    }
   },
 };
-
-export default copy;

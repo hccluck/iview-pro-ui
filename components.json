@@ -1,0 +1,5 @@
+{
+  "PageTitle": "./src/components/PageTitle/index.js",
+  "SearchForm": "./src/components/SearchForm/index.js",
+  "TablePage": "./src/components/TablePage/index.js"
+}
