@@ -12,7 +12,7 @@
       :disabled-hover="disabledHover"
       :row-class-name="rowClassName"
       :size="size"
-      :no-data-tex="noDataText"
+      :no-data-text="noDataText"
       :no-filtered-data-text="noFilteredDataText"
       :draggable="draggable"
       :tooltip-theme="tooltipTheme"
@@ -196,7 +196,7 @@ export default {
     // 显示总数
     showTotal: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     // 显示电梯，可以快速切换到某一页
     showElevator: {
