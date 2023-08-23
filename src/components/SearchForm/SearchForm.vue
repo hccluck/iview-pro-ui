@@ -43,6 +43,17 @@ export default {
   data() {
     return { fold: true };
   },
+  methods: {
+    resetFields() {
+      this.$refs.form.resetFields()
+    },
+    async validate(callback) {
+      return this.$refs.form.validate(callback)
+    },
+    validateField(prop, callback) {
+      this.$refs.form.validateField(prop, callback)
+    }
+  }
 };
 </script>
 
