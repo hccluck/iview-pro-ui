@@ -57,47 +57,4 @@ export default {
 };
 </script>
 
-<style lang="less">
-.search-form {
-  padding: 6px 6px 0;
-  background: #f5f7f9;
-  border: 1px solid #d7d7d7;
-
-  .ivu-form {
-    transition: all 0.3s ease;
-  }
-  .ivu-form-item {
-    margin-bottom: 8px;
-    width: calc((100% / 3) - 10px);
-  }
-  .ivu-form-item-label {
-    padding: 7px 0;
-  }
-  .ivu-date-picker {
-    width: 100%;
-  }
-}
-
-.search-form-2 {
-  .ivu-form-item {
-    width: calc(50% - 10px);
-  }
-}
-
-.search-options {
-  text-align: right;
-  padding: 4px 11px 8px;
-
-  button,
-  span {
-    margin-left: 6px;
-  }
-
-  i {
-    transition: all 0.3s ease;
-    &.active {
-      transform: rotate(180deg);
-    }
-  }
-}
-</style>
+<style lang="less"></style>

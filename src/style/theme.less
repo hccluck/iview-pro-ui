@@ -56,9 +56,6 @@
   padding-right: 8px;
   line-height: 1.25;
 }
-.ivu-select-dropdown {
-  max-height: 60vh;
-}
 
 .ivu-form-item {
   margin-bottom: 20px;
@@ -71,9 +68,6 @@
 }
 .ivu-form-item-error-tip {
   padding-top: 3px;
-}
-.ivu-radio-inner:after {
-  border-radius: 50%;
 }
 
 .card-title {
@@ -107,6 +101,41 @@
   margin-right: 20px;
 }
 
+// PageTitle 样式
+.page-title {
+  padding: 16px 0;
+  p {
+    padding-left: 10px;
+    font-size: 16px;
+    color: #153a5c;
+    height: 16px;
+    line-height: 1;
+    border-left: 2px solid #153a5c;
+  }
+}
+
+// TablePage 样式
+.table-page {
+  position: relative;
+}
+.page-box {
+  padding: 12px 2px;
+  background: #fff;
+  text-align: right;
+}
+.page-box .ivu-select {
+  width: 100%;
+}
+.page-box .ivu-page-item-active {
+  background: #153a5c;
+  color: #fff;
+}
+.page-box .ivu-page-item-active a,
+.page-box .ivu-page-item-active a:hover {
+  color: #fff;
+}
+
+// SearchForm 样式
 .search-form-2,
 .search-form {
   padding: 6px 5px 0 5px;
@@ -132,6 +161,18 @@
   }
   .ivu-date-picker {
     width: 100%;
+  }
+
+  .search-options {
+    text-align: right;
+    padding: 4px 11px 8px;
+  
+    i {
+      transition: all 0.3s ease;
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
   }
 }
 
@@ -265,6 +306,7 @@
   border-left: none;
 }
 
+// 自定义滚动条
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;

@@ -13,16 +13,4 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
-.page-title {
-  padding: 16px 0;
-  p {
-    padding-left: 10px;
-    font-size: 16px;
-    color: #153a5c;
-    height: 16px;
-    line-height: 1;
-    border-left: 2px solid #153a5c;
-  }
-}
-</style>
+<style lang="less" scoped></style>

@@ -344,24 +344,4 @@ export default {
 };
 </script>
 
-<style>
-.table-page {
-  position: relative;
-}
-.page-box {
-  padding: 12px 2px;
-  background: #fff;
-  text-align: right;
-}
-.page-box .ivu-select {
-  width: 100%;
-}
-.page-box .ivu-page-item-active {
-  background: #153a5c;
-  color: #fff;
-}
-.page-box .ivu-page-item-active a,
-.page-box .ivu-page-item-active a:hover {
-  color: #fff;
-}
-</style>
+<style></style>
