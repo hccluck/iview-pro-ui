@@ -66,7 +66,7 @@
         @on-page-size-change="onPageSizeChange"
         ref="page"
       >
-        <slot />
+        <slot></slot>
       </Page>
     </div>
   </div>

@@ -3,6 +3,7 @@ import pkg from '../package.json';
 import TablePage from './components/TablePage/index.js';
 import SearchForm from './components/SearchForm/index.js';
 import PageTitle from './components/PageTitle/index.js';
+import Total from './components/Total/index.js';
 
 import copy from './directives/copy.js';
 import loading from './directives/loading.js';
@@ -10,6 +11,7 @@ import loading from './directives/loading.js';
 const components = {
   TablePage,
   SearchForm,
+  Total,
   Title: PageTitle,
   Tips: PageTitle,
 };
