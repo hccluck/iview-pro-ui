@@ -33,13 +33,13 @@
       @on-drag-drop="onDragDrop"
       ref="table"
     >
-      <template slot="header">
+      <template v-slot:header>
         <slot name="header"></slot>
       </template>
-      <template slot="footer">
+      <template v-slot:footer>
         <slot name="footer"></slot>
       </template>
-      <template slot="loading">
+      <template v-slot:loading>
         <slot name="loading"></slot>
       </template>
     </Table>
@@ -66,7 +66,7 @@
         @on-page-size-change="onPageSizeChange"
         ref="page"
       >
-        <slot></slot>
+        <Total v-if="lazyloadTotal" :total="total" :length="data && data.length" :loading="loading" @getTotal="refresh(99999, 99999)" />
       </Page>
     </div>
   </div>
@@ -74,10 +74,12 @@
 
 <script>
 // import loading from '../../directives/loading.js';
+import Total from '../Total';
 
 export default {
   name: 'TablePage',
   // directives: { loading },
+  components: { Total },
   props: {
     // 表格数据
     data: {
@@ -187,6 +189,10 @@ export default {
     placement: {
       type: String,
       default: 'bottom',
+    },
+    lazyloadTotal: {
+      type: Boolean,
+      default: true,
     },
     // 简洁版
     simple: {

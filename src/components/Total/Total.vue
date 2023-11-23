@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     getTotal() {
-      this.$emit('getTotal');
+      this.$emit('getTotal', 99999, 99999);
     },
   },
 };
