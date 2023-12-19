@@ -224,7 +224,6 @@
     padding: 5px 0;
     line-height: 1.35;
     color: #333;
-    white-space: break-spaces;
     word-wrap: break-word;
   }
 
@@ -233,8 +232,6 @@
   }
 }
 
-.detail-form-2,
-.detail-form,
 .search-form-2,
 .search-form,
 .config-form-2,
@@ -242,6 +239,9 @@
   .ivu-form-item {
     width: calc((100% / 3) - 10px);
 
+    &.col-6 {
+      width: calc(25% - 10px);
+    }
     &.col-8 {
       width: calc((100% / 3) - 10px);
     }
@@ -251,8 +251,37 @@
     &.col-16 {
       width: calc((200% / 3) - 10px);
     }
+    &.col-18 {
+      width: calc(75% - 10px);
+    }
     &.col-24 {
       width: calc(100% - 10px);
+    }
+  }
+}
+
+.detail-form-2,
+.detail-form {
+  .ivu-form-item {
+    width: calc(100% / 3);
+
+    &.col-6 {
+      width: 25%;
+    }
+    &.col-8 {
+      width: calc(100% / 3);
+    }
+    &.col-12 {
+      width: 50%;
+    }
+    &.col-16 {
+      width: calc(200% / 3);
+    }
+    &.col-18 {
+      width: 75%;
+    }
+    &.col-24 {
+      width: 100%
     }
   }
 }
@@ -264,11 +293,14 @@
 }
 
 .config-form-2,
-.detail-form-2,
 .search-form-2 {
   .ivu-form-item {
     width: calc(50% - 10px);
   }
+}
+
+.detail-form-2 .ivu-form-item {
+  width: 50%;
 }
 
 .footer-opts {
